@@ -1,0 +1,62 @@
+
+install node
+
+
+
+
+ 4701  npx create-next-app@15.5.6 saas --typescript
+
+ which linter? ESLint
+ Tailwind? Yes
+ src dir? no
+ App router? no
+ Turbopack? no
+ customize alias?  no
+
+ 4702  cd saas
+
+ 4703  tree
+
+ 4704  cd pages
+ 4705  rm -r api
+ 4706  cd ..
+ 
+ 4708  mkdir api
+ 4709  vim requirements.txt
+ 4710  vim api/index.py
+ 
+ 4712  vercel link
+set up project...? Yes
+Which scope... <your_name_project>? enter
+Link to existing project? no (we want to start a new one)
+project name?  saas
+in which directory ? ./ (means here; so just hit enter)
+want to modify these settings?  no
+want to change additional project settings? no
+
+(Now it is linked)
+
+ 4713  vercel env add OPENAI_API_KEY
+ What's the value of you key?  
+
+ 4714  vercel .
+
+
+ 4715  npm install react-markdown remark-gfm remark-breaks
+ 4716  npm install @tailwindcss/typography\
+ 4717  vercel .\
+ 4718  vercel --prod\
+ 
+ 4720  source /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-rc.zsh\
+ 
+ 4722  exit\
+ 
+ 4726  cd gitDesk/ai_projects\
+ 
+ 4728  cd saas\
+ 
+ 4730  git status\
+ 4732  git add .\
+ 4733  git commit -m "Initial commit : Day 1"\
+ 
+ 4735  cd ..\
