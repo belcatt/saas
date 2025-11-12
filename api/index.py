@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/api")
 def idea():
     client = OpenAI()
-    prompt = [{"role": "user", "content": "Reply with a new business idea for AI Agents for Real Estate Agents, formatted with headings, sub-headings and bullet points"}]
+    prompt = [{"role": "user", "content": "Reply with a new business idea for AI Agents, formatted with headings, sub-headings and bullet points and easy to read in a pitch deck style."}]
     stream = client.chat.completions.create(model="gpt-5-nano", messages=prompt, stream=True)
 
     def event_stream():
