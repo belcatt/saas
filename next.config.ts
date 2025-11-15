@@ -1,20 +1,10 @@
-import type { NextConfig } from 'next';
-import path from 'path';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Keep Next from walking up into /Volumes/HomeX/bcatt
-  outputFileTracingRoot: __dirname,
-
-  webpack: (config) => {
-    // Force a single copy of react/react-dom from THIS app
-    config.resolve = config.resolve || {};
-    config.resolve.alias = {
-      ...(config.resolve.alias ?? {}),
-      react: path.resolve(__dirname, 'node_modules/react'),
-      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
-    };
-    return config;
-  },
+  output: 'export',  // This exports static HTML/JS files
+  images: {
+    unoptimized: true  // Required for static export
+  }
 };
 
 export default nextConfig;
